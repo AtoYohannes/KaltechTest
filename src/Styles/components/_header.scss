@@ -1,6 +1,7 @@
 .cr-header {
   // margin-bottom: $spacer * .2;
-  border-bottom: $border-width solid $border-color;
+  transition: ease-in-out 1s;
+
   &__nav-right {
     flex-direction: row;
     display: flex;
@@ -18,13 +19,13 @@
   }
 }
 .searchContainer {
-  width: 400px
+  width: 400px;
 }
 .searchImgContainer {
   width: 200px;
   height: 150px;
   background-color: #ffffff;
-  object-fit:cover;
+  object-fit: cover;
 }
 .searchImgContainer img {
   height: 300%;
@@ -32,7 +33,7 @@
   vertical-align: middle;
   height: 100%;
   width: 100%;
-  object-fit:cover;
+  object-fit: cover;
 }
 .searchResultsHeader {
   margin-bottom: 10px;
@@ -41,21 +42,18 @@
   margin-top: 30px;
 }
 .popoverSearch {
-  box-shadow:  7px 7px 7px darken($color: #d4d4d4, $amount: 5);;
-
+  box-shadow: 7px 7px 7px darken($color: #d4d4d4, $amount: 5);
 }
 .headerLogoContainer {
   margin-left: 40px;
 }
 .divider {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   margin-top: 1px;
   margin-bottom: 1px;
 }
 .scrolledAppBar {
-  button {
-    color: $light;
-    border-color: $light;
-    
-  }
+  box-shadow: 3px 3px 3px darken($color: #c5c5c5, $amount: 5);
+  background: $background;
+  transition: ease-in-out 1s;
 }

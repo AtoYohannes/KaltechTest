@@ -8,21 +8,13 @@ import {
   PopoverBody,
   ListGroup,
   ListGroupItem,
+  Button,
 } from "reactstrap";
 import bn from "../../utils/bemnames";
 import routes from "../../Config/routes";
-import { RenderButton } from "../MainRender";
-import {
-  MdReorder,
-  MdHelp,
-  MdExitToApp,
-  MdGroupAdd,
-  MdPerson,
-  MdPanoramaFishEye,
-  MdQuestionAnswer,
-  MdPageview,
-} from "react-icons/md";
+import { MdReorder, MdExitToApp, MdGroupAdd, MdSort } from "react-icons/md";
 import { Link } from "react-router-dom";
+import Logo from "../../Assets/KelalLogo.png";
 
 const bem = bn.create("header");
 
@@ -59,9 +51,9 @@ class Header extends React.Component {
 
   render() {
     const isMobile = this.state.isMobile;
-    let drawerClasses = "";
+    let drawerClasses = "cr-header";
     if (this.props.scrolled) {
-      drawerClasses = "bg-gradient-theme-right scrolledAppBar";
+      drawerClasses = "scrolledAppBar";
     }
 
     return (
@@ -71,90 +63,22 @@ class Header extends React.Component {
             to={{ pathname: routes.homePage }}
             style={{ textDecoration: "none" }}
           >
-            <Nav navbar>LOGO </Nav>
+            <Nav navbar>
+              <img src={Logo} width="130" height="60" alt="" />{" "}
+            </Nav>
           </Link>
 
-          {isMobile && (
-            <Nav navbar className="ml-2">
-              Project Title
-            </Nav>
-          )}
           {isMobile ? (
             <Nav navbar className={bem.e("nav-right")}>
               <NavItem>
-                <Popover
-                  trigger="legacy"
-                  placement="bottom"
-                  isOpen={this.state.isAboutPopoverOpen}
-                  toggle={this.toggleAboutPopover}
-                  target="AboutPopover"
-                  className="p-5 border"
-                >
-                  <PopoverBody className="p-2 border-light">
-                    <ListGroup flush>
-                      <ListGroupItem
-                        tag="button"
-                        action
-                        className="border-light"
-                      >
-                        <MdPerson className="mr-3" /> {"  "} About Us
-                      </ListGroupItem>
-                      <ListGroupItem
-                        tag="button"
-                        action
-                        className="border-light"
-                      >
-                        <MdHelp className="mr-3" /> How Project Title Works
-                      </ListGroupItem>
-
-                      <ListGroupItem
-                        tag="button"
-                        action
-                        className="border-light"
-                      >
-                        <MdPanoramaFishEye className="mr-3" /> Browse Project
-                        Title
-                      </ListGroupItem>
-                      <ListGroupItem
-                        tag="button"
-                        action
-                        className="border-light"
-                      >
-                        <MdQuestionAnswer className="mr-3" /> FAQ
-                      </ListGroupItem>
-                      <ListGroupItem
-                        tag="button"
-                        action
-                        className="border-light"
-                      >
-                        <MdPageview className="mr-3" /> Terms Of Service
-                      </ListGroupItem>
-                    </ListGroup>
-                  </PopoverBody>
-                </Popover>
-                <NavLink onMouseEnter={this.toggleAboutPopover}>
-                  <RenderButton
-                    title="About"
-                    outline
-                    color="dark"
-                    id="AboutPopover"
-                  />
+                <NavLink>
+                  <Button>Let's Talk</Button>
                 </NavLink>
               </NavItem>
-              <NavItem>
+              <NavItem className="mt-3 ml-4">
                 <NavLink>
-                  <RenderButton
-                    title="SignUp"
-                    onClick={() => this.props.toggle("signUp")}
-                  />
-                </NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink>
-                  <RenderButton
-                    onClick={() => this.props.toggle("signIn")}
-                    title="SignIn"
-                  />
+                  <MdSort className="text-primary" size={25} />{" "}
+                  <h7 className="ml-2">MENU</h7>
                 </NavLink>
               </NavItem>
             </Nav>
@@ -181,13 +105,9 @@ class Header extends React.Component {
                     <ListGroupItem
                       tag="button"
                       action
-                      className="border-light"
                       onClick={() => this.props.toggle("signUp")}
                     >
-                      <MdGroupAdd className="mr-2" /> SignUp
-                    </ListGroupItem>
-                    <ListGroupItem tag="button" action className="border-light">
-                      <MdHelp className="mr-2" /> About Us
+                      <MdGroupAdd className="mr-2" /> Let's Talk
                     </ListGroupItem>
                   </ListGroup>
                 </PopoverBody>

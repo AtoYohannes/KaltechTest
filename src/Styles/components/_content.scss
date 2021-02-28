@@ -10,3 +10,250 @@
 .rounded-circle {
   object-fit: cover;
 }
+
+.textContainer {
+  padding: 40px;
+  min-height: 120vh;
+  padding-top: 180px;
+  // background-image: url(../../Assets/KelalLogoBackground.png);
+  // background: linear-gradient(
+  //     180deg,
+  //     rgba(248, 248, 248, 0) 0%,
+  //     rgba(248, 248, 248, 0.84) 47.92%,
+  //     #f8f8f8 100%
+  //   ),
+  //   url(../../Assets/KelalLogoBackground.png);
+  background: linear-gradient(
+      180deg,
+      rgba(237, 237, 237, 0.9),
+      rgba(237, 237, 237, 0.9),
+      #f8f8f8 100%
+    ),
+    url(../../Assets/KelalLogoBackground.png);
+
+  clip-path: polygon(
+    100% 0%,
+    0% 0%,
+    0% 85%,
+    1% 84.95%,
+    2% 84.8%,
+    3% 84.6%,
+    4% 84.3%,
+    5% 83.9%,
+    6% 83.45%,
+    7% 82.9%,
+    8% 82.25%,
+    9% 81.55%,
+    10% 80.8%,
+    11% 79.95%,
+    12% 79.05%,
+    13% 78.1%,
+    14% 77.1%,
+    15% 76.05%,
+    16% 75%,
+    17% 73.9%,
+    18% 72.8%,
+    19% 71.65%,
+    20% 70.5%,
+    21% 69.35%,
+    22% 68.2%,
+    23% 67.05%,
+    24% 65.9%,
+    25% 64.8%,
+    26% 63.75%,
+    27% 62.75%,
+    28% 61.75%,
+    29% 60.8%,
+    30% 59.9%,
+    31% 59.1%,
+    32% 58.35%,
+    33% 57.65%,
+    34% 57.05%,
+    35% 56.5%,
+    36% 56.05%,
+    37% 55.65%,
+    38% 55.35%,
+    39% 55.15%,
+    40% 55.05%,
+    41% 55%,
+    42% 55.05%,
+    43% 55.2%,
+    44% 55.45%,
+    45% 55.75%,
+    46% 56.15%,
+    47% 56.65%,
+    48% 57.2%,
+    49% 57.85%,
+    50% 58.55%,
+    51% 59.35%,
+    52% 60.2%,
+    53% 61.1%,
+    54% 62.05%,
+    55% 63.05%,
+    56% 64.1%,
+    57% 65.15%,
+    58% 66.3%,
+    59% 67.4%,
+    60% 68.55%,
+    61% 69.7%,
+    62% 70.85%,
+    63% 72%,
+    64% 73.15%,
+    65% 74.25%,
+    66% 75.35%,
+    67% 76.4%,
+    68% 77.45%,
+    69% 78.4%,
+    70% 79.35%,
+    71% 80.2%,
+    72% 81.05%,
+    73% 81.8%,
+    74% 82.45%,
+    75% 83.05%,
+    76% 83.6%,
+    77% 84.05%,
+    78% 84.4%,
+    79% 84.7%,
+    80% 84.85%,
+    81% 85%,
+    82% 85%,
+    83% 84.9%,
+    84% 84.75%,
+    85% 84.5%,
+    86% 84.2%,
+    87% 83.75%,
+    88% 83.25%,
+    89% 82.7%,
+    90% 82.05%,
+    91% 81.3%,
+    92% 80.5%,
+    93% 79.65%,
+    94% 78.75%,
+    95% 77.8%,
+    96% 76.8%,
+    97% 75.75%,
+    98% 74.65%,
+    99% 73.55%,
+    100% 72.4%
+  );
+  h1 {
+    // background: linear-gradient(to right, $primary, $secondary);
+    // font-weight: bolder;
+    // font-size: 72px;
+    // background: -webkit-linear-gradient(#eee, #333);
+    // // -webkit-background-clip: text;
+    // -webkit-text-fill-color: transparent;
+    font-size: 70px;
+    font-size: 70px;
+    font-family: Comfortaa;
+    font-style: bolder;
+
+    background: -webkit-linear-gradient($primary, $secondary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .description {
+    width: 100%;
+    display: grid;
+    justify-content: center;
+    padding: 50px;
+    margin-top: 60px;
+    font-family: "Poppins";
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 28px;
+  }
+}
+
+.tabsContainer {
+  margin: auto 70px;
+  h1 {
+    font-size: 84px;
+    font-weight: 250;
+    background: -webkit-linear-gradient($primary, $secondary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .title {
+    b {
+      color: $primary;
+    }
+    font-weight: bolder;
+    font-size: 21px;
+  }
+  .body {
+    color: #b1b1b1;
+    font-weight: normal;
+  }
+  .footer {
+    color: $primary;
+    font-weight: normal;
+  }
+}
+.dividerContainer {
+  margin: 0 auto;
+  width: 85%;
+
+  .divdiv {
+    position: static;
+    height: 84px;
+    background: #f8f8f8;
+    left: 128px;
+    right: 1131px;
+    top: calc(50% - 84px / 2);
+  }
+}
+
+.howContainer {
+  min-height: 100vh;
+  -webkit-clip-path: polygon(100% 0, 100% 84%, 0 100%, 0 14%);
+  clip-path: polygon(100% 0, 100% 84%, 0 100%, 0 14%);
+  background: #0e1c2a;
+  padding: 190px;
+  h1 {
+    color: $light;
+    font-family: Comfortaa;
+    font-size: 24px;
+    font-style: normal;
+  }
+  .card {
+    // min-height: 144px;
+    display: flex;
+    align-items: center;
+    margin: 30px auto;
+    position: relative;
+    box-sizing: border-box;
+    padding: 20px 20px;
+    $border: 2px;
+    color: $dark;
+    background: #0e1c2a;
+    background-clip: padding-box;
+    border: solid $border transparent;
+    border-radius: 14px;
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: -1;
+      margin: -$border;
+      border-radius: inherit;
+      background: linear-gradient(to right, $primary, $primary);
+    }
+    .icon {
+      color: linear-gradient(to right, $primary, $primary);
+      font-size: 70px;
+      font-weight: bolder;
+    }
+  }
+  .cardBody {
+    margin-top: 10px;
+    color: #fff;
+  }
+}

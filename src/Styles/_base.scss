@@ -1,4 +1,6 @@
-@import url(https://fonts.googleapis.com/css?family=Belleza:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i);
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i);
+@import url(https://fonts.googleapis.com/css?family=Comfortaa:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i);
+
 // @import url(https://fonts.googleapis.com/css?family=Itim:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i);
 
 /* Font Smoothing */
@@ -26,33 +28,57 @@ button,
 .navbar,
 .brand,
 .alert {
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-font-smoothing: antialiased;
-    font-family: Belleza, Poppins, Roboto, Raleway, "Helvetica Neue", Arial, sans-serif;
-    font-weight: 500;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: Poppins, Comfortaa, Roboto, Raleway, "Helvetica Neue", Arial,
+    sans-serif;
+  font-weight: 500;
 }
 
 .cr-app {
-    display: flex;
-    width: 100%;
-    min-height: 100vh;
-    overflow-x: hidden;
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
 }
 
 .cr-app button {
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    transition: .5s;
+  //   padding-left: 20px;
+  //   padding-right: 20px;
+  //   padding-top: 5px;
+  //   padding-bottom: 5px;
+  //   transition: 0.5s;
+  display: flex;
+  align-items: center;
+  margin: auto;
+  position: relative;
+  box-sizing: border-box;
+  padding: 10px 32px;
+  $border: 5px;
+  color: $dark;
+  background: $background;
+  background-clip: padding-box;
+  border: solid $border transparent;
+  border-radius: 14px;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    margin: -$border;
+    border-radius: inherit;
+    background: linear-gradient(to right, $primary, $secondary);
+  }
 }
 
 .cr-app button:hover {
-    transform: scale(1.09);
+  transform: scale(1.09);
 }
 
 .cr-app-body {
-    margin-top: 55px;
+  //   margin-top: 55px;
 }
-
-
